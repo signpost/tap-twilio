@@ -5,7 +5,8 @@
   "description": "Singer.io Tap for Twilio",
   "scripts": {
     "lint": "eslint .",
-    "test": "eslint ."
+    "test": "eslint . && mocha",
+    "unit-test": "mocha"
   },
   "keywords": [
     "Singer.io",
