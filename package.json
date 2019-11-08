@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "repository": "github:signpost/tap-twilio",
   "description": "Singer.io Tap for Twilio",
+  "bin": "./app/Tap.js",
   "scripts": {
     "coverage": "nyc mocha",
     "lint": "eslint .",
