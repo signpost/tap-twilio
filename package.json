@@ -4,8 +4,9 @@
   "repository": "github:signpost/tap-twilio",
   "description": "Singer.io Tap for Twilio",
   "scripts": {
+    "coverage": "nyc mocha",
     "lint": "eslint .",
-    "test": "eslint . && mocha",
+    "test": "eslint . && nyc mocha",
     "unit-test": "mocha"
   },
   "keywords": [
