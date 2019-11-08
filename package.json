@@ -25,5 +25,8 @@
     "eslint-plugin-import": "^2.18.2",
     "mocha": "^6.2.2",
     "nyc": "^14.1.1"
+  },
+  "dependencies": {
+    "twilio": "^3.37.0"
   }
 }
