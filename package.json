@@ -15,5 +15,8 @@
     "name": "Roy Paterson",
     "email": "roy@roypaterson.com"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^6.6.0"
+  }
 }
