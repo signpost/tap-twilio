@@ -1,0 +1,19 @@
+{
+  "name": "tap-twilio",
+  "version": "1.0.0",
+  "repository": "github:signpost/tap-twilio",
+  "description": "Singer.io Tap for Twilio",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Singer.io",
+    "Twilio",
+    "Tap"
+  ],
+  "author": {
+    "name": "Roy Paterson",
+    "email": "roy@roypaterson.com"
+  },
+  "license": "MIT"
+}
