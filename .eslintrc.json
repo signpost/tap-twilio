@@ -1,0 +1,191 @@
+{
+    "extends": "eslint:recommended",
+
+    /**
+     * Allow Node8 features
+     */
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
+
+    /* basic syntax: 0 is off (don't enforce), 1 is warn, 2 is error
+     * (enforce), although some options have significantly more complex
+     * configurations */
+    "rules": {
+        "array-bracket-spacing": ["error", "never"],
+
+        // allow wrapping multi-line arrow function bodies in brackets,
+        // even if they're only one statement
+        "arrow-body-style": 0,
+
+        "arrow-parens": ["error", "as-needed", {
+            "requireForBlockBody": false
+        }],
+        "arrow-spacing": ["error", {
+            "before": true,
+            "after": true
+        }],
+        "brace-style": ["error", "1tbs", {
+            "allowSingleLine": false
+        }],
+        "comma-dangle": ["error", {
+            "arrays": "always-multiline",
+            "objects": "always-multiline"
+        }],
+        "comma-spacing":["error", {
+            "before": false,
+            "after": true
+        }],
+        "comma-style": ["error", "last"],
+        "consistent-this": ["error", "self"],
+        "curly": "error",
+        "default-case": "error",
+        "dot-notation": "error",
+        "eqeqeq": "error",
+        "eol-last": "error",
+        "func-style": ["error", "expression", {
+            "allowArrowFunctions": true
+        }],
+        "handle-callback-err": ["error", "^(err|error)$"],
+        "indent": ["error", 4, {
+            "ArrayExpression": 1,
+            "CallExpression": {
+                "arguments": 1
+            },
+            "FunctionExpression": {
+                "body": 1,
+                "parameters": 1
+            },
+            "MemberExpression": 1,
+            "ObjectExpression": 1,
+            "SwitchCase": 1
+        }],
+        "keyword-spacing": ["error", {
+            "before": false,
+            "after": true,
+            "overrides": {
+                "catch": {
+                    "before": true,
+                    "after": false
+                },
+                "finally": {
+                    "before": true
+                },
+                "else": {
+                    "before": true
+                },
+                "while": {
+                    "before": true
+                }
+            }
+        }],
+        "key-spacing": ["error", {
+            "beforeColon": false,
+            "afterColon": true,
+            "mode": "strict"
+        }],
+        "max-len": ["error", 100, {
+            "ignoreTemplateLiterals": true
+        }],
+        "new-cap": "error",
+        "no-array-constructor": "error",
+        "no-case-declarations": "error",
+        "no-confusing-arrow": ["error", {
+            "allowParens": true
+        }],
+        "no-console": "error",
+        "no-const-assign": "error",
+        "no-dupe-args": "error",
+        "no-dupe-class-members": "error",
+        "no-dupe-keys": "error",
+        "no-empty": "error",
+        "no-empty-function": "error",
+        "no-iterator": "error",
+        "no-nested-ternary": "error",
+        "no-new-func": "error",
+        "no-new-object": "error",
+        "no-undef": "error",
+        "no-unneeded-ternary": "error",
+        "no-useless-constructor": "error",
+        "no-var": "error",
+        "no-whitespace-before-property": "error",
+        "object-curly-spacing": ["error", "always"],
+        "object-shorthand": "error",
+        "one-var": ["error", "never"],
+        "padding-line-between-statements": ["error",
+            { "blankLine": "always", "prev": "*", "next": "return" },
+            { "blankLine": "always", "prev": "directive", "next": "*" },
+            { "blankLine": "always", "prev": "block-like", "next": "*" },
+            { "blankLine": "always", "prev": "*", "next": "block-like" },
+            { "blankLine": "any", "prev": "case", "next": "case" }
+        ],
+        "prefer-arrow-callback": ["error", {
+            "allowNamedFunctions": false,
+            "allowUnboundThis": true
+        }],
+        "prefer-const": ["error", {
+            "destructuring": "any"
+        }],
+        "prefer-rest-params": "error",
+        "prefer-spread": "error",
+        "prefer-template": "error",
+        "quotes": ["error", "single", {
+            "allowTemplateLiterals": true,
+            "avoidEscape": true
+        }],
+        "quote-props": ["error", "consistent-as-needed"],
+        "radix": ["error", "always"],
+        "semi": ["error", "always" ],
+        "semi-spacing": [ "error", {
+            "before": false,
+            "after": true
+        }],
+        "spaced-comment": ["error", "always"],
+        "space-before-blocks": ["error", "always"],
+        "space-before-function-paren": ["error", "never"],
+        "space-infix-ops": "error",
+        "space-in-parens": ["error", "never"],
+        "template-curly-spacing": ["error", "never"],
+
+        "no-fallthrough": 2,
+        "no-implied-eval": 2,
+        "no-labels": 2,
+        "no-lone-blocks": 2,
+        "no-lonely-if": 0,
+        "no-loop-func": 2,
+        "no-mixed-spaces-and-tabs": 2,
+        "no-multiple-empty-lines": 2,
+        "no-multi-spaces": 2,
+        "no-multi-str": 2,
+        "no-native-reassign": 2,
+        "no-new": 2,
+        "no-new-wrappers": 2,
+        "no-path-concat": 0,
+        "no-process-exit": 2,
+        "no-regex-spaces": 2,
+        "no-redeclare": 2,
+        "no-return-assign": 2,
+        "no-sequences": 2,
+        "no-shadow": 0,
+        "no-shadow-restricted-names": 2,
+        "no-spaced-func": 2,
+        "no-trailing-spaces": 2,
+        "no-underscore-dangle": 0,
+        "no-unused-vars": 2,
+        "no-use-before-define": 2,
+        "no-with": 2,
+        "space-unary-ops": [ 2, { "words": true, "nonwords": false } ],
+        "strict": [2, "global"],
+        "valid-jsdoc": [ 1, {
+            "prefer": { "return": "returns" },
+            "requireReturn": true,
+            "requireReturnDescription": true,
+            "requireParamDescription": true
+        }]
+    },
+
+    "env": {
+        "es6": true,
+        "node": true
+    }
+}
