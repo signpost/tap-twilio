@@ -1,0 +1,37 @@
+{
+  "name": "tap-twilio",
+  "version": "1.0.0",
+  "repository": "github:signpost/tap-twilio",
+  "description": "Singer.io Tap for Twilio",
+  "bin": "./app/Tap.js",
+  "scripts": {
+    "coverage": "nyc mocha",
+    "lint": "eslint .",
+    "test": "eslint . && nyc mocha",
+    "unit-test": "mocha"
+  },
+  "keywords": [
+    "Singer.io",
+    "Twilio",
+    "Tap"
+  ],
+  "author": {
+    "name": "Roy Paterson",
+    "email": "roy@roypaterson.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.2",
+    "monkey-patcher": "^1.1.0",
+    "nyc": "^14.1.1"
+  },
+  "dependencies": {
+    "highland": "^2.13.5",
+    "minimist": "^1.2.0",
+    "twilio": "^3.37.0"
+  }
+}
