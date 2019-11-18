@@ -61,7 +61,7 @@ const Tap = class Tap {
     streamMessages({ api, stream }) {
         return new Highland(
             this.streamInstances(api)
-        ).map(record => SingerIO.formatRecord({ stream, record }));
+        ).map(record => `${SingerIO.formatRecord({ stream, record })}\n`);
     }
 
     /**

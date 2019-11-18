@@ -160,8 +160,8 @@ exports.Tap = {
             .toPromise(Promise);
 
         records.should.deep.equal([
-            '<record-1>',
-            '<record-2>',
+            '<record-1>\n',
+            '<record-2>\n',
         ]);
     },
 
