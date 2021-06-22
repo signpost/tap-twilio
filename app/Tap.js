@@ -41,6 +41,10 @@ const Tap = class Tap {
                 api: this._twilio.incomingPhoneNumbers,
                 stream: 'IncomingPhoneNumbers',
             }),
+            this.streamMessages({
+                api: this._twilio.messaging.services,
+                stream: 'MessageServices',
+            }),
         ]).merge();
 
         return new Promise((resolve, reject) => {
