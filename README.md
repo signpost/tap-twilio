@@ -1,6 +1,6 @@
 # tap-twilio
 
-This module is a Singer.io "Tap" for loading data from [Twilio](https://www.twilio.com). At the moment it only returns [*IncomingPhoneNumber*](https://www.twilio.com/docs/phone-numbers/api/incomingphonenumber-resource), but other streams may be added in the future.
+This module is a Singer.io "Tap" for loading data from [Twilio](https://www.twilio.com). At the moment it only returns [*IncomingPhoneNumber*](https://www.twilio.com/docs/phone-numbers/api/incomingphonenumber-resource) and [*MessageServices*](https://www.twilio.com/docs/messaging/services/api), but other streams may be added in the future.
 
 ## Usage
 `tap-twilio --config <config-file>`
