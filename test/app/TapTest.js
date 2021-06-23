@@ -88,12 +88,20 @@ exports.Tap = {
 
             this.twilio = {
                 incomingPhoneNumbers: '<incoming-phone-numbers-api>',
+                messaging: {
+                    services: '<message-services-api>',
+                },
             };
             patch(Tap, 'newTwilio', () => this.twilio);
 
             this.tap = this.create();
 
-            patch(this.tap, 'streamMessages', () => new Highland(['<record-1>', '<record-2>']));
+            const expectedMessageStreams = [
+                ['<record-1>', '<record-2>'],
+                ['<record-3>', '<record-4>'],
+            ];
+
+            patch(this.tap, 'streamMessages', () => new Highland(expectedMessageStreams.shift()));
 
             this.stdout = new Highland();
 
@@ -104,6 +112,7 @@ exports.Tap = {
 
             const expectedStreams = [
                 { api: '<incoming-phone-numbers-api>', stream: 'IncomingPhoneNumbers' },
+                { api: '<message-services-api>', stream: 'MessageServices' },
             ];
             tap(this.tap, 'streamMessages', params => {
                 params.should.deep.equal(expectedStreams.shift());
@@ -119,7 +128,9 @@ exports.Tap = {
 
             records.should.deep.equal([
                 '<record-1>',
+                '<record-3>',
                 '<record-2>',
+                '<record-4>',
             ]);
         },
 
