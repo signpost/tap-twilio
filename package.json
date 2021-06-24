@@ -1,6 +1,6 @@
 {
   "name": "tap-twilio",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "repository": "github:signpost/tap-twilio",
   "description": "Singer.io Tap for Twilio",
   "bin": "./app/Tap.js",
